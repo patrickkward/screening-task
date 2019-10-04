@@ -1,5 +1,6 @@
 <script>
 
+//https://alligator.io/vuejs/vue-html5-canvas/
 function convertPercentWidthToPixels(percent, ctx){
   return Math.floor((ctx.canvas.width / 100) * percent);
 }
@@ -81,7 +82,8 @@ export default {
     // Calculate the new box. (Computed properties update on-demand.)
     const newBox = this.calculatePoint
     this.x = newBox.x;
-    //creates the
+
+    //clears the old point using the cache and creates the new point
     ctx.beginPath();
     ctx.clearRect(cachedPoint.x, cachedPoint.y, cachedPoint.width, cachedPoint.height);
     ctx.rect(newBox.x, newBox.y, newBox.width, newBox.height);

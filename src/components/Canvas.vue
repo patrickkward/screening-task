@@ -6,6 +6,9 @@
 </template>
 
 <script>
+
+//https://alligator.io/vuejs/vue-html5-canvas/
+
 export default {
   data() {
     return {
@@ -26,10 +29,10 @@ export default {
   },
 
   mounted () {
-    //sends convas to
+    //sends canvas to all children.
     this.provider.context = this.$refs['graph-canvas'].getContext('2d')
 
-    //Resizes the canvase.
+    //Resizes the canvas.
     this.$refs['graph-canvas'].width = 200
     this.$refs['graph-canvas'].height = 500
   }
